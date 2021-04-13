@@ -54,7 +54,7 @@ def napisal(message):
           response_json = json.loads(response.text)
           period = ""
           try:
-            day_json = response_json["schedule"]["monday"]
+            day_json = response_json["schedule"][input_day]
           except:
             bot.reply_to(message, "NET PAR EPTA")
           else:
